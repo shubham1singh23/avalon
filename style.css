@@ -1,0 +1,95 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        
+        body {
+            background-color: #0a0a0a;
+            color: #d0d0d0;
+            font-family: 'VT323', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 90%;
+            margin: 5vh auto;
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(173, 216, 230, 0.7);
+        }
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .faq-section {
+            text-align: left;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #00bcd4, #004d66);
+            color: #fff;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            border-radius: 5px;
+            position: relative;
+        }
+        .faq-question::after {
+            content: '▼';
+            position: absolute;
+            right: 15px;
+            transition: transform 0.3s;
+            font-family: 'VT323', monospace;
+
+        }
+        .faq-question.active::after {
+            transform: rotate(180deg);
+        }
+        .faq-question:hover {
+            background: linear-gradient(90deg, #004d66, #00bcd4);
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            font-size: 1.2rem;
+            background: rgba(0, 188, 212, 0.2);
+            margin-top: 5px;
+            border-left: 3px solid #00bcd4;
+            border-radius: 5px;
+        }
+        .glitch {
+            color: #d0d0d0;
+            font-size: 2.5rem;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+        .faq-question, .faq-answer {
+    font-family: 'VT323', monospace;
+}
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px cyan, -2px -2px magenta; }
+            50% { text-shadow: -2px -2px cyan, 2px 2px magenta; }
+            100% { text-shadow: 2px 2px cyan, -2px -2px magenta; }
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                max-width: 95%;
+                padding: 15px;
+            }
+            .title {
+                font-size: 1.5rem;
+            }
+            .faq-question {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+        }

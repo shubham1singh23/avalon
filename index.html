@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    
+  
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">Hackathon FAQ</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">What is the Hackathon?</button>
+                <p class="faq-answer">A hackathon is a collaborative programming event where participants develop innovative projects within a limited time.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who can participate?</button>
+                <p class="faq-answer">Anyone with a passion for technology, coding, and problem-solving can participate.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do I need a team?</button>
+                <p class="faq-answer">You can join as an individual or form a team with up to 4 members.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is the registration fee?</button>
+                <p class="faq-answer">The registration is completely free.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What are the prizes?</button>
+                <p class="faq-answer">Exciting cash prizes, internships, and swag for top teams.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What should I bring?</button>
+                <p class="faq-answer">Bring your laptop, charger, and any hardware you plan to use.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Are there any specific themes?</button>
+                <p class="faq-answer">Themes will be announced at the start of the event.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Will food be provided?</button>
+                <p class="faq-answer">Yes, meals and snacks will be provided throughout the event.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I register?</button>
+                <p class="faq-answer">Visit our official website and complete the registration form.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I use third-party APIs?</button>
+                <p class="faq-answer">Yes, you are encouraged to use open-source tools and APIs.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = button.classList.contains('active');
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.style.display = 'none';
+                });
+                if (!isActive) {
+                    button.classList.add('active');
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
