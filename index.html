@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon FAQ</title>
     <link rel="stylesheet" href="style.css">
-    
-  
+
+
 </head>
+
 <body>
     <div class="container">
         <h1 class="glitch">Hackathon FAQ</h1>
         <div class="faq-section">
             <div class="faq-item">
                 <button class="faq-question">What is the Hackathon?</button>
-                <p class="faq-answer">A hackathon is a collaborative programming event where participants develop innovative projects within a limited time.</p>
+                <p class="faq-answer">A hackathon is a collaborative programming event where participants develop
+                    innovative projects within a limited time.</p>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Who can participate?</button>
-                <p class="faq-answer">Anyone with a passion for technology, coding, and problem-solving can participate.</p>
+                <p class="faq-answer">Anyone with a passion for technology, coding, and problem-solving can participate.
+                </p>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Do I need a team?</button>
@@ -54,21 +58,67 @@
             </div>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const isActive = button.classList.contains('active');
-                document.querySelectorAll('.faq-question').forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.nextElementSibling.style.display = 'none';
-                });
-                if (!isActive) {
-                    button.classList.add('active');
-                    answer.style.display = 'block';
-                }
-            });
-        });
-    </script>
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-container">
+            <div class="row">
+                <div class="contact-box">
+                    <h2>Technical Queries</h2>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: techsupport@hackathon.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2>Other Queries</h2>
+                    <p>Phone: +987 654 3210</p>
+                    <p>Email: info@hackathon.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2>Address</h2>
+                    <p>Terna Engineering College, Nerul, Navi Mumbai, India</p>
+                    <p>Email: info@hackathon.com</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="contact-box map-container">
+                    <h2 class="map-heading">Google Map Location</h2>
+                    <iframe width="100%" height="100%"
+                        style="border:0; border-radius: 10px; filter: invert(90%) hue-rotate(180deg);" loading="lazy"
+                        allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps?q=Terna+Engineering+College,Nerul&output=embed">
+                    </iframe>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjb9MGwlfwkp1HwdEG1KeIp20QVJZxCV0&callback=initMap" async defer></script>
+<script>function initMap() {
+    var location = { lat: 19.0339, lng: 73.0169 }; // Terna Engineering College, Nerul
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+        styles: [
+            { elementType: 'geometry', stylers: [{ color: '#1c1c1c' }] },
+            { elementType: 'labels.text.stroke', stylers: [{ color: '#000' }] },
+            { elementType: 'labels.text.fill', stylers: [{ color: '#fff' }] }
+        ],
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
+    });
+
+    // New recommended marker method
+    new google.maps.marker.AdvancedMarkerElement({
+        map: map,
+        position: location
+    });
+}
+</script> -->
+
 </body>
+
 </html>
